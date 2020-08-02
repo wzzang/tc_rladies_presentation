@@ -1,1 +1,1 @@
-# Presentation for R_Ladies@TC meetup
+## A short resentation for R_Ladies@TC meetup
