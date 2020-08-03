@@ -1,1 +1,1 @@
-## A short resentation for R_Ladies Twin Cities meetup 
+## R_Ladies Twin Cities meetup presentation
