@@ -475,8 +475,8 @@ dim(dt)
 ### #concatenate all chunks
 ### chunkdf = pd.concat(dfList,sort=False)
 ### 
-### chunkdf.head()
-### chunkdf.shape</code></pre>
+### #chunkdf.head()
+### #chunkdf.shape</code></pre>
 <ul>
 <li>Now, we run <em>.py</em> script in R and check the <em>py</em> object in R.</li>
 </ul>
@@ -491,10 +491,9 @@ head(py$chunkdf)
 ### 6  6 2010     1   1    5   NaN  -19  -10 1017   NW 16.10  0  0</code></pre>
 <ul>
 <li>Or, in interactive <code>REFL</code> (Python read-eval-print loop)<br />
-<code>file = py$filename</code><br />
-<code>repl_python()</code><br />
-<code>import pandas as pdd</code><br />
-<code>refl_df = pdd.read_csv(r.file, sep  = &#39;,&#39;)</code><br />
+<code>filename=&quot;~/R_Ladies/BJ_PM25.csv&quot;</code> <code>repl_python()</code><br />
+<code>import pandas as pd</code><br />
+<code>refl_df = pd.read_csv(r.filename, sep  = &#39;,&#39;)</code><br />
 <code>refl_df.head()</code><br />
 <code>exit</code></li>
 </ul>
@@ -661,7 +660,18 @@ list.dirs(&#39;~/R_Ladies&#39;)
 ### [4] &quot;/Users/wzzang/R_Ladies/temp.df&quot;          
 ### [5] &quot;/Users/wzzang/R_Ladies/temp.df/.metadata&quot;
 ### [6] &quot;/Users/wzzang/R_Ladies/tmp.df&quot;           
-### [7] &quot;/Users/wzzang/R_Ladies/tmp.df/.metadata&quot;</code></pre>
+### [7] &quot;/Users/wzzang/R_Ladies/tmp.df/.metadata&quot;
+
+list.files(&#39;~/R_Ladies/selected.df/&#39;)
+### [1] &quot;1.fst&quot; &quot;2.fst&quot; &quot;3.fst&quot;
+
+file.info(&#39;~/R_Ladies/tmp.df/1.fst&#39;)[&#39;size&#39;]
+###                           size
+### ~/R_Ladies/tmp.df/1.fst 317061
+
+file.info(&#39;~/R_Ladies/selected.df/1.fst&#39;)[&#39;size&#39;]
+###                               size
+### ~/R_Ladies/selected.df/1.fst 78665</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li><strong>More information about <code>disk.frame</code> can be found <a href="https://diskframe.com">here</a></strong></li>
 </ol>

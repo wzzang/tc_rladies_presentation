@@ -1,8 +1,10 @@
 ---
 title: "A short presentation about reticulate & disk.frame"
 author: "wzzang"
-date: "2020-08-04"
-output: html_document
+date: '2020-08-04'
+output:
+  pdf_document: default
+  html_document: default
 ---
   
   
@@ -110,10 +112,10 @@ head(py$chunkdf)
 
 
   + Or, in interactive `REFL` (Python read-eval-print loop)  
-  `file = py$filename`  
+  `filename="~/R_Ladies/BJ_PM25.csv"`
   `repl_python()`  
-  `import pandas as pdd`  
-  `refl_df = pdd.read_csv(r.file, sep  = ',')`  
+  `import pandas as pd`  
+  `refl_df = pd.read_csv(r.filename, sep  = ',')`  
   `refl_df.head()`  
   `exit`  
   
@@ -245,6 +247,12 @@ disk.df %>%
   write_disk.frame(outdir = otdir, overwrite = TRUE)
 
 list.dirs('~/R_Ladies')
+
+list.files('~/R_Ladies/selected.df/')
+
+file.info('~/R_Ladies/tmp.df/1.fst')['size']
+
+file.info('~/R_Ladies/selected.df/1.fst')['size']
 ```
   
 

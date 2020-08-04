@@ -12,5 +12,5 @@ for df in FileReader:
 #concatenate all chunks
 chunkdf = pd.concat(dfList,sort=False)
 
-chunkdf.head()
-chunkdf.shape 
+#chunkdf.head()
+#chunkdf.shape 
