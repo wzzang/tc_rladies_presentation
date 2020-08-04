@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 ***  
   
 **How to handle large datasets?**   
-Eg. a 7.5gb sized csv file with 40k+ obs and prob. 4k+ vars while only a subset of vars is needed.  
+Eg. a 50gb sized csv file with 500k+ obs and prob. 10k+ vars while only a subset of vars is needed.  
 
 **Two solutions**  
    + Python (pandas/dask) + R (reticulate)  
